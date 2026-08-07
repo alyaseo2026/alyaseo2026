@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: alyaseo2026/alyaseo2026
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "المقالات الأخبارية"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "العنوان الرئيسي للمقال", name: "title", widget: "string"}
+      - {label: "رابط المقال URL", name: "slug", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "وصف الميتا للسيو", name: "description", widget: "text"}
+      - {label: "محتوى المقال (الضربة الاستباقية)", name: "body", widget: "markdown"}
